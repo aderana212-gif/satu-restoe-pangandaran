@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Satu Restoe Pangandaran — Eat & Dine</title>
+<style>
+:root{--blue:#063c96;--blue2:#082a5b;--yellow:#ffc928;--cream:#fbfaf6;--ink:#13213a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--cream)}
+a{color:inherit}.nav{position:absolute;z-index:5;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:18px 5%;color:#fff}
+.nav img{width:135px;height:auto;filter:brightness(0) invert(1)}.navlinks{display:flex;gap:28px;font-weight:700;font-size:15px}.navlinks a{text-decoration:none}
+.hero{min-height:680px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 78% 35%,rgba(255,201,40,.22),transparent 25%),linear-gradient(120deg,#062c60 0%,#07529b 52%,#0c345e 100%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,14,34,.78),rgba(2,14,34,.20),rgba(2,14,34,.55))}
+.hero-inner{position:relative;z-index:2;max-width:1200px;width:90%;margin:auto;color:#fff;padding:130px 0 80px}
+.hero h1{font-size:clamp(42px,7vw,78px);line-height:.96;margin:0 0 16px;font-weight:900;max-width:650px}
+.script{font-size:clamp(26px,4vw,46px);font-style:italic;color:var(--yellow);font-family:cursive;margin-bottom:20px}
+.rating{font-size:20px;font-weight:800;margin:18px 0}.stars{color:var(--yellow);letter-spacing:3px}
+.cta{display:inline-block;background:var(--yellow);color:#082a5b;padding:17px 27px;border-radius:40px;text-decoration:none;font-weight:900;box-shadow:0 10px 25px rgba(0,0,0,.18)}
+.features{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;padding:34px 5%;gap:0}
+.feature{text-align:center;padding:12px 20px;border-right:1px solid #ddd}.feature:last-child{border:0}.icon{font-size:35px;color:#1160c4}.feature h3{margin:7px 0;color:#082a5b}.feature p{margin:0;color:#555}
+.section{padding:70px 5%;max-width:1250px;margin:auto}.section h2{text-align:center;font-size:36px;color:#082a5b;margin:0 0 35px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.photo{height:220px;border-radius:18px;background:linear-gradient(135deg,#0b4e8e,#0b2545 55%,#ffc928);position:relative;overflow:hidden}.photo:before{content:"SATU RESTOE";position:absolute;inset:auto 0 22px;text-align:center;color:#fff;font-size:24px;font-weight:900;letter-spacing:2px;text-shadow:0 2px 7px #000}
+.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}.card{background:#fff;border-radius:22px;padding:28px;box-shadow:0 10px 30px rgba(9,39,76,.08)}.card h3{color:#082a5b;margin-top:0}
+.social{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.social a{padding:10px 14px;border-radius:20px;background:#eef4ff;text-decoration:none;font-weight:800;color:#082a5b}
+.review{font-size:22px;font-weight:900}.quote{font-size:18px;line-height:1.65;color:#444}
+.bottom{background:#08366d;color:#fff;padding:30px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px}.bottom h2{margin:0;color:#fff;font-size:25px}.bottom .cta{white-space:nowrap}
+footer{background:#061b37;color:#fff;padding:45px 5%}.footgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px;max-width:1200px;margin:auto}footer h3{color:var(--yellow)}footer p,footer li{color:#d9e5f4;line-height:1.7}footer ul{padding-left:18px}.copyright{text-align:center;margin-top:30px;color:#9bb0c8;font-size:13px}
+@media(max-width:800px){.navlinks{display:none}.hero{min-height:650px}.hero-inner{padding-top:140px}.features,.gallery,.cards,.footgrid{grid-template-columns:1fr 1fr}.feature:nth-child(2){border:0}.bottom{flex-direction:column;text-align:center}}
+@media(max-width:520px){.features,.gallery,.cards,.footgrid{grid-template-columns:1fr}.feature{border-right:0;border-bottom:1px solid #ddd;padding:20px}.gallery .photo{height:190px}}
+</style></head>
+<body>
+<nav class="nav"><img src="logo-satu-restoe.jpg" alt="Satu Restoe"><div class="navlinks"><a href="#home">Beranda</a><a href="#about">Tentang Kami</a><a href="#gallery">Galeri</a><a href="#location">Lokasi</a><a href="#contact">Kontak</a></div></nav>
+<header class="hero" id="home"><div class="hero-inner">
+<div class="script">Lifestyle Destination</div><h1>SATU RESTOE<br>PANGANDARAN</h1><div class="script">Eat · Dine · Enjoy</div>
+<div class="rating"><span class="stars">★ ★ ★ ★ ★</span> &nbsp; 4,8 / 5 &nbsp; | &nbsp; 19 Google Reviews</div>
+<p style="font-size:18px;max-width:570px;line-height:1.6">Coffee · Food · Working Space<br>Tempat menikmati makanan, suasana, dan momen bersama.</p>
+<a class="cta" href="https://www.google.com/search?q=satu+restoe+pangandaran+pangandaran+regency+reviews" target="_blank" rel="noopener">★ &nbsp; REVIEW KAMI DI GOOGLE</a></div></header>
+<section class="features" id="about">
+<div class="feature"><div class="icon">🍴</div><h3>Makanan Enak</h3><p>Beragam menu dengan rasa terbaik.</p></div>
+<div class="feature"><div class="icon">🌴</div><h3>Suasana Nyaman</h3><p>Tempat luas, view pantai, dan instagramable.</p></div>
+<div class="feature"><div class="icon">♫</div><h3>Live Music</h3><p>Hiburan live music untuk menemani Anda.</p></div>
+<div class="feature"><div class="icon">●●</div><h3>Pelayanan Ramah</h3><p>Staff siap melayani dengan sepenuh hati.</p></div></section>
+<section class="section" id="gallery"><h2>GALERI KAMI</h2><div class="gallery"><div class="photo"></div><div class="photo"></div><div class="photo"></div><div class="photo"></div></div><p style="text-align:center;color:#777;margin-top:20px">Foto galeri asli Satu Restoe dapat ditambahkan dari foto resmi resto.</p></section>
+<section class="section"><div class="cards">
+<div class="card"><h3>APA KATA MEREKA</h3><div class="review"><span class="stars">★★★★★</span><br>4,8 / 5</div><p>19 Google Reviews</p><p class="quote">“Staff nya ramah, tempat nya instagramable, makanan nya enak2. Maju terus management Satu Restoe!”</p><strong>— R Wilaga Pratama</strong></div>
+<div class="card" id="location"><h3>TEMUKAN KAMI</h3><p>📍 Jl. Pamugaran Bulak Laut, Kampung Turis, Kecamatan Pangandaran, Kabupaten Pangandaran, Jawa Barat 46396</p><p>🕐 Buka setiap hari</p><div class="social"><a href="https://www.instagram.com/saturestoe_/" target="_blank">Instagram @saturestoe_</a><a href="https://www.tiktok.com/@saturestoe_" target="_blank">TikTok @saturestoe_</a></div></div>
+<div class="card"><h3>REVIEW GOOGLE</h3><p>Sudah berkunjung? Bagikan pengalaman Anda secara jujur di Google.</p><a class="cta" href="https://www.google.com/search?q=satu+restoe+pangandaran+pangandaran+regency+reviews" target="_blank" rel="noopener">⭐ TULIS ULASAN</a></div>
+</div></section>
+<div class="bottom"><h2>NIKMATI MAKANAN, SUASANA & MOMEN TERBAIK<br><small style="color:#ffc928">Hanya di Satu Restoe Pangandaran!</small></h2><a class="cta" href="#contact">RESERVASI SEKARANG</a></div>
+<footer id="contact"><div class="footgrid"><div><img src="logo-satu-restoe.jpg" alt="Satu Restoe" style="width:220px;filter:brightness(0) invert(1)"></div><div><h3>LINK CEPAT</h3><ul><li>Beranda</li><li>Tentang Kami</li><li>Galeri</li><li>Lokasi</li></ul></div><div><h3>MEDIA SOSIAL</h3><p>Instagram: @saturestoe_</p><p>TikTok: @saturestoe_</p></div></div><div class="copyright">© Satu Restoe Pangandaran · Eat & Dine</div></footer>
+</body></html>

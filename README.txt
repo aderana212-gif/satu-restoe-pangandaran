@@ -1,0 +1,1 @@
+Web Satu Restoe tahap 1 mengikuti desain mockup yang disepakati. Logo berasal dari file pengguna; link Google berasal dari link pengguna.
