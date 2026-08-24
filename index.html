@@ -7,6 +7,9 @@
 
 <style>
 *{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
 body{
  margin:0;
  font-family:Arial,Helvetica,sans-serif;
@@ -14,6 +17,7 @@ body{
  background:#f5f3ed;
  line-height:1.6
 }
+
 a{text-decoration:none;color:inherit}
 
 .nav{
@@ -24,18 +28,30 @@ a{text-decoration:none;color:inherit}
  display:flex;
  align-items:center;
  justify-content:space-between;
- padding:14px 7%;
+ padding:12px 6%;
  box-shadow:0 2px 12px #0001
 }
+
 .logo{
  display:flex;
  align-items:center;
- gap:10px;
+ gap:14px;
  font-weight:bold;
- font-size:20px
+ font-size:24px
 }
-.logo img{width:55px;height:auto}
-.navlinks{display:flex;gap:24px;font-weight:bold}
+
+.logo img{
+ width:85px;
+ height:auto;
+ display:block
+}
+
+.navlinks{
+ display:flex;
+ gap:22px;
+ font-weight:bold
+}
+
 .navlinks a:hover{color:#0a78a0}
 
 .hero{
@@ -49,17 +65,24 @@ a{text-decoration:none;color:inherit}
  linear-gradient(#073f5dcc,#073f5dcc),
  url("gallery-02.jpg") center/cover
 }
-.hero-inner{max-width:850px;color:white}
+
+.hero-inner{
+ max-width:850px;
+ color:white
+}
+
 .hero h1{
  font-size:clamp(40px,7vw,76px);
  margin:0 0 10px;
  letter-spacing:2px
 }
+
 .hero p{
  font-size:20px;
  max-width:650px;
  margin:0 auto 28px
 }
+
 .btn{
  display:inline-block;
  padding:14px 25px;
@@ -69,93 +92,271 @@ a{text-decoration:none;color:inherit}
  font-weight:bold
 }
 
-section{padding:65px 7%;max-width:1250px;margin:auto}
-.title{text-align:center;margin-bottom:38px}
+section{
+ padding:65px 7%;
+ max-width:1250px;
+ margin:auto
+}
+
+.title{
+ text-align:center;
+ margin-bottom:38px
+}
+
 .title h2{
  font-family:Georgia,serif;
  font-size:38px;
  margin:0 0 8px
 }
-.title p{margin:0;color:#65737a}
 
-.about{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:35px;
- align-items:center
+.title p{
+ margin:0;
+ color:#65737a
 }
-.about img{
- width:100%;
- border-radius:18px;
- display:block
-}
-.about-text h2{
- font-family:Georgia,serif;
- font-size:36px;
- margin-top:0
-}
+
+/* MENU */
 
 .menu{
  display:grid;
  grid-template-columns:repeat(2,1fr);
  gap:22px
 }
+
 .menu-card{
  background:white;
  border-radius:18px;
  padding:28px;
  box-shadow:0 5px 22px #00000012
 }
+
 .menu-card h3{
  margin-top:0;
  font-family:Georgia,serif;
  font-size:28px;
  color:#0b5270
 }
+
 .menu-card ul{
  margin:0;
  padding-left:20px
 }
-.menu-card li{margin:9px 0}
 
-.gallery{
+.menu-card li{
+ margin:9px 0
+}
+
+/* OUR PLACE */
+
+.place{
  display:grid;
- grid-template-columns:repeat(3,1fr);
+ grid-template-columns:1fr 1.3fr;
+ gap:35px;
+ align-items:center
+}
+
+.place-text h2{
+ font-family:Georgia,serif;
+ font-size:38px;
+ margin-top:0
+}
+
+.place-text p{
+ color:#53636b
+}
+
+.place-gallery{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:14px
+}
+
+.place-gallery img{
+ width:100%;
+ height:220px;
+ object-fit:cover;
+ border-radius:16px;
+ display:block
+}
+
+/* REVIEW */
+
+.review-section{
+ background:#fff;
+ border-radius:22px;
+ box-shadow:0 5px 25px #00000012
+}
+
+.review-main{
+ display:grid;
+ grid-template-columns:280px 1fr;
+ gap:35px;
+ align-items:center
+}
+
+.rating-box{
+ text-align:center
+}
+
+.rating-box h3{
+ font-size:22px;
+ margin:0 0 8px
+}
+
+.stars{
+ color:#f1b51c;
+ font-size:30px;
+ letter-spacing:3px
+}
+
+.rating-number{
+ font-size:42px;
+ font-weight:bold;
+ margin:5px 0
+}
+
+.review-card{
+ background:#f8f8f6;
+ border-radius:18px;
+ padding:25px
+}
+
+.review-card .stars{
+ font-size:20px
+}
+
+.review-card p{
+ font-size:18px;
+ margin:12px 0
+}
+
+.review-name{
+ font-weight:bold
+}
+
+.review-buttons{
+ display:flex;
+ justify-content:center;
+ gap:14px;
+ flex-wrap:wrap;
+ margin-top:28px
+}
+
+.review-btn{
+ display:inline-block;
+ padding:13px 23px;
+ border-radius:28px;
+ font-weight:bold;
+ background:#0b5270;
+ color:#fff
+}
+
+.review-btn.write{
+ background:#f6c928;
+ color:#173b4d
+}
+
+/* EVENT */
+
+.event-grid{
+ display:grid;
+ grid-template-columns:repeat(5,1fr);
  gap:15px
 }
-.gallery img{
- width:100%;
- height:230px;
- object-fit:cover;
- border-radius:14px
+
+.event-card{
+ position:relative;
+ overflow:hidden;
+ border-radius:16px;
+ min-height:210px;
+ background:#073f5c
 }
 
-.services{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:20px
+.event-card img{
+ width:100%;
+ height:210px;
+ object-fit:cover;
+ display:block
 }
-.service{
- background:white;
- padding:25px;
- border-radius:16px;
+
+.event-card div{
+ position:absolute;
+ bottom:0;
+ left:0;
+ right:0;
+ padding:18px 10px 12px;
  text-align:center;
- box-shadow:0 4px 18px #0001
+ color:#fff;
+ font-weight:bold;
+ background:linear-gradient(transparent,#000b)
 }
-.service h3{margin:10px 0 5px}
+
+/* LOCATION */
+
+.location{
+ background:#073f5c;
+ color:#fff;
+ max-width:none
+}
+
+.location-inner{
+ max-width:1250px;
+ margin:auto;
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:35px;
+ align-items:center
+}
+
+.location h2{
+ font-family:Georgia,serif;
+ font-size:38px;
+ margin-top:0
+}
+
+.location p{
+ font-size:18px
+}
+
+.map-box{
+ background:#fff;
+ border-radius:18px;
+ padding:8px;
+ overflow:hidden
+}
+
+.map-box iframe{
+ width:100%;
+ height:300px;
+ border:0;
+ border-radius:12px
+}
+
+.map-btn{
+ display:inline-block;
+ margin-top:18px;
+ padding:13px 22px;
+ border-radius:28px;
+ background:#f6c928;
+ color:#173b4d;
+ font-weight:bold
+}
+
+/* CONTACT */
 
 .contact{
  background:#0b5270;
  color:white;
  max-width:none;
  text-align:center;
- padding:60px 7%
+ padding:55px 7%
 }
+
 .contact h2{
  font-family:Georgia,serif;
  font-size:38px;
  margin-top:0
 }
+
 .social{
  display:flex;
  justify-content:center;
@@ -163,6 +364,7 @@ section{padding:65px 7%;max-width:1250px;margin:auto}
  flex-wrap:wrap;
  margin-top:25px
 }
+
 .social a{
  background:white;
  color:#0b5270;
@@ -178,16 +380,86 @@ footer{
  padding:22px
 }
 
-@media(max-width:750px){
- .navlinks{display:none}
- .about,.menu{grid-template-columns:1fr}
- .gallery{grid-template-columns:1fr 1fr}
- .services{grid-template-columns:1fr}
- section{padding:48px 5%}
+/* MOBILE */
+
+@media(max-width:850px){
+
+ .nav{
+  padding:10px 5%
+ }
+
+ .logo{
+  font-size:20px
+ }
+
+ .logo img{
+  width:85px
+ }
+
+ .navlinks{
+  display:none
+ }
+
+ .menu{
+  grid-template-columns:1fr
+ }
+
+ .place{
+  grid-template-columns:1fr
+ }
+
+ .review-main{
+  grid-template-columns:1fr
+ }
+
+ .event-grid{
+  grid-template-columns:repeat(2,1fr)
+ }
+
+ .location-inner{
+  grid-template-columns:1fr
+ }
+
+ section{
+  padding:48px 5%
+ }
 }
+
 @media(max-width:480px){
- .gallery{grid-template-columns:1fr}
- .hero{min-height:70vh}
+
+ .hero{
+  min-height:70vh
+ }
+
+ .hero h1{
+  font-size:46px
+ }
+
+ .hero p{
+  font-size:18px
+ }
+
+ .place-gallery{
+  grid-template-columns:1fr 1fr
+ }
+
+ .place-gallery img{
+  height:150px
+ }
+
+ .event-grid{
+  grid-template-columns:1fr 1fr
+ }
+
+ .event-card,
+ .event-card img{
+  height:170px
+ }
+
+ .title h2,
+ .location h2{
+  font-size:32px
+ }
 }
 </style>
 </head>
@@ -195,59 +467,49 @@ footer{
 <body>
 
 <nav class="nav">
+
  <div class="logo">
-  <img src="logo-satu-restoe.jpg" alt="Satu Restoe">
+  <img src="logo-satu-restoe.jpg" alt="Satu Restoe Pangandaran">
   <span>SATU RESTOE</span>
  </div>
 
  <div class="navlinks">
-  <a href="#about">Tentang</a>
   <a href="#menu">Menu</a>
-  <a href="#gallery">Galeri</a>
-  <a href="#services">Layanan</a>
-  <a href="#contact">Kontak</a>
+  <a href="#place">Our Place</a>
+  <a href="#review">Review</a>
+  <a href="#event">Event</a>
+  <a href="#location">Location</a>
  </div>
+
 </nav>
 
+
 <header class="hero">
+
  <div class="hero-inner">
+
   <h1>SATU RESTOE</h1>
+
   <p>
-   Eat & Dine dengan suasana santai, hidangan Nusantara,
-   musik, dan pemandangan indah Pantai Pangandaran.
+   Eat & Dine dengan suasana santai,
+   hidangan Nusantara, musik, dan
+   pemandangan indah Pantai Pangandaran.
   </p>
+
   <a class="btn" href="#menu">Lihat Menu</a>
+
  </div>
+
 </header>
 
-<section id="about">
- <div class="about">
-  <img src="gallery-01.jpg" alt="Satu Restoe Pangandaran">
 
-  <div class="about-text">
-   <h2>Tentang Satu Restoe</h2>
-   <p>
-    Satu Restoe adalah destinasi kuliner di Pangandaran
-    yang memadukan cita rasa Nusantara dengan suasana
-    santai di tepi pantai.
-   </p>
-   <p>
-    Tempat yang nyaman untuk makan bersama keluarga,
-    berkumpul bersama teman, menikmati musik, maupun
-    mengadakan berbagai acara.
-   </p>
-   <p>
-    Nikmati makanan, suasana, dan momen bersama di
-    Satu Restoe Pangandaran.
-   </p>
-  </div>
- </div>
-</section>
+<!-- MENU -->
 
 <section id="menu">
+
  <div class="title">
   <h2>Menu Pilihan</h2>
-  <p>Beberapa menu pilihan Satu Restoe</p>
+  <p>Menu pilihan Satu Restoe Pangandaran</p>
  </div>
 
  <div class="menu">
@@ -259,6 +521,7 @@ footer{
    </ul>
   </div>
 
+
   <div class="menu-card">
    <h3>Aneka Ayam</h3>
    <ul>
@@ -267,12 +530,14 @@ footer{
    </ul>
   </div>
 
+
   <div class="menu-card">
    <h3>Nusantara Food</h3>
    <ul>
     <li>Paket Nasi Liwet</li>
    </ul>
   </div>
+
 
   <div class="menu-card">
    <h3>Seafood</h3>
@@ -287,6 +552,7 @@ footer{
    </ul>
   </div>
 
+
   <div class="menu-card">
    <h3>Snack</h3>
    <ul>
@@ -294,10 +560,11 @@ footer{
     <li>Cireng Goreng</li>
     <li>Tempe Mendoan</li>
     <li>Bala-Bala</li>
-    <li>Bakw an Udang</li>
+    <li>Bakwan Udang</li>
     <li>Kentang Sosis</li>
    </ul>
   </div>
+
 
   <div class="menu-card">
    <h3>Minuman</h3>
@@ -317,78 +584,268 @@ footer{
   </div>
 
  </div>
+
 </section>
 
-<section id="gallery">
+
+<!-- OUR PLACE -->
+
+<section id="place">
+
  <div class="title">
-  <h2>Suasana Satu Restoe</h2>
-  <p>Makan, santai dan menikmati Pangandaran</p>
+  <h2>OUR PLACE</h2>
+  <p>The Satu Restoe Experience</p>
  </div>
 
- <div class="gallery">
-  <img src="gallery-01.jpg" alt="Suasana Satu Restoe">
-  <img src="gallery-02.jpg" alt="Outdoor Satu Restoe">
-  <img src="gallery-03.jpg" alt="Area outdoor">
-  <img src="gallery-04.jpg" alt="Area Satu Restoe">
-  <img src="gallery-05.jpg" alt="Bangunan Satu Restoe">
-  <img src="gallery-06.jpg" alt="Suasana restoran">
+ <div class="place">
+
+  <div class="place-text">
+
+   <h2>THE SATU RESTOE EXPERIENCE</h2>
+
+   <p>
+    Nikmati suasana Satu Restoe dengan pemandangan
+    Pantai Pangandaran yang indah.
+   </p>
+
+   <p>
+    Cocok untuk bersantai bersama keluarga,
+    menikmati sunset, berkumpul bersama teman,
+    maupun merayakan momen spesial.
+   </p>
+
+  </div>
+
+
+  <div class="place-gallery">
+
+   <img src="gallery-03.jpg" alt="Outdoor Satu Restoe">
+
+   <img src="gallery-04.jpg" alt="Indoor Satu Restoe">
+
+   <img src="gallery-01.jpg" alt="Sunset Satu Restoe">
+
+   <img src="gallery-02.jpg" alt="Malam Satu Restoe">
+
+   <img src="gallery-05.jpg" alt="Keluarga Satu Restoe">
+
+   <img src="gallery-06.jpg" alt="Event Satu Restoe">
+
+  </div>
+
  </div>
+
 </section>
 
-<section id="services">
+
+<!-- REVIEW -->
+
+<section id="review">
+
  <div class="title">
-  <h2>Our Services</h2>
-  <p>Lebih dari sekadar tempat makan</p>
+  <h2>WHAT THEY SAY</h2>
+  <p>Pengalaman para tamu Satu Restoe</p>
  </div>
 
- <div class="services">
-  <div class="service">
-   <h3>Live Music</h3>
-   <p>Nikmati suasana makan ditemani pertunjukan musik.</p>
+
+ <div class="review-section">
+
+  <div class="review-main">
+
+   <div class="rating-box">
+
+    <h3>Google Reviews</h3>
+
+    <div class="stars">
+     ★★★★★
+    </div>
+
+    <div class="rating-number">
+     4.8 / 5
+    </div>
+
+    <p>
+     Berdasarkan ulasan pelanggan
+    </p>
+
+   </div>
+
+
+   <div class="review-card">
+
+    <div class="stars">
+     ★★★★★
+    </div>
+
+    <p>
+     “Staff nya ramah, tempat nya instagramable,
+     makanan nya enak2. Maju terus management
+     Satu Restoe”
+    </p>
+
+    <div class="review-name">
+     — R Wilaga Pratama
+    </div>
+
+   </div>
+
   </div>
 
-  <div class="service">
-   <h3>Free Karaoke</h3>
-   <p>Bernyanyi bersama keluarga dan teman.</p>
+
+  <div class="review-buttons">
+
+   <a
+    class="review-btn"
+    href="https://www.google.com/search?q=satu+restoe+pangandaran"
+    target="_blank">
+    LIHAT SEMUA REVIEW
+   </a>
+
+   <a
+    class="review-btn write"
+    href="https://www.google.com/search?q=satu+restoe+pangandaran"
+    target="_blank">
+    ✍ TULIS REVIEW
+   </a>
+
   </div>
 
-  <div class="service">
-   <h3>Event & Gathering</h3>
-   <p>Tempat untuk gathering, acara keluarga dan berbagai kegiatan.</p>
-  </div>
-
-  <div class="service">
-   <h3>Wedding Venue</h3>
-   <p>Area yang dapat digunakan untuk berbagai acara pernikahan.</p>
-  </div>
-
-  <div class="service">
-   <h3>Outdoor Area</h3>
-   <p>Suasana terbuka dengan pemandangan Pantai Pangandaran.</p>
-  </div>
-
-  <div class="service">
-   <h3>Big Screen</h3>
-   <p>Cocok untuk menikmati pertandingan dan hiburan bersama.</p>
-  </div>
  </div>
+
 </section>
 
-<div class="contact" id="contact">
+
+<!-- EVENT -->
+
+<section id="event">
+
+ <div class="title">
+  <h2>YOUR MOMENT, OUR PLACE</h2>
+  <p>Tempat untuk berbagai momen spesial</p>
+ </div>
+
+
+ <div class="event-grid">
+
+  <div class="event-card">
+   <img src="gallery-05.jpg" alt="Wedding">
+   <div>WEDDING</div>
+  </div>
+
+  <div class="event-card">
+   <img src="gallery-06.jpg" alt="Gathering">
+   <div>GATHERING</div>
+  </div>
+
+  <div class="event-card">
+   <img src="gallery-04.jpg" alt="Birthday">
+   <div>BIRTHDAY</div>
+  </div>
+
+  <div class="event-card">
+   <img src="gallery-02.jpg" alt="Meeting">
+   <div>MEETING</div>
+  </div>
+
+  <div class="event-card">
+   <img src="gallery-03.jpg" alt="Rombongan">
+   <div>ROMBONGAN</div>
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section class="location" id="location">
+
+ <div class="location-inner">
+
+  <div>
+
+   <h2>FIND US</h2>
+
+   <h3>Satu Restoe Pangandaran</h3>
+
+   <p>
+    📍 Jl. Pamugaran Bulak Laut,
+    Kampung Turis, Pangandaran,
+    Jawa Barat 46396
+   </p>
+
+   <p>
+    📞 +62 812-2011-1178
+   </p>
+
+   <a
+    class="map-btn"
+    href="https://www.google.com/maps/search/?api=1&query=Satu+Restoe+Pangandaran"
+    target="_blank">
+    📍 GOOGLE MAPS
+   </a>
+
+  </div>
+
+
+  <div class="map-box">
+
+   <iframe
+    src="https://www.google.com/maps?q=Satu+Restoe+Pangandaran&output=embed"
+    loading="lazy">
+   </iframe>
+
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<div class="contact">
+
  <h2>Datang & Nikmati</h2>
- <p>Satu Restoe Pangandaran</p>
- <p>Jl. Pamugaran Bulak Laut, Kampung Turis, Pangandaran</p>
- <p>WhatsApp: +62 812-2011-1178</p>
+
+ <p>
+  Satu Restoe Pangandaran
+ </p>
+
+ <p>
+  Eat & Dine • Music • Event • Pangandaran
+ </p>
 
  <div class="social">
-  <a href="https://instagram.com/saturestoe_" target="_blank">Instagram @saturestoe_</a>
-  <a href="https://www.tiktok.com/@saturestoe_" target="_blank">TikTok @saturestoe_</a>
-  <a href="https://www.saturestoe.com" target="_blank">Website</a>
+
+  <a
+   href="https://instagram.com/saturestoe_"
+   target="_blank">
+   Instagram @saturestoe_
+  </a>
+
+  <a
+   href="https://www.tiktok.com/@saturestoe_"
+   target="_blank">
+   TikTok @saturestoe_
+  </a>
+
+  <a
+   href="https://wa.me/6281220111178"
+   target="_blank">
+   WhatsApp
+  </a>
+
  </div>
+
 </div>
 
+
 <footer>
+
  © Satu Restoe Pangandaran — Eat & Dine
+
 </footer>
 
 </body>
