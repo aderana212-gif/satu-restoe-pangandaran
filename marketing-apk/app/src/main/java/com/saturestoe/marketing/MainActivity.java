@@ -40,12 +40,10 @@ public class MainActivity extends Activity {
 
     private void openWhatsAppBusiness(String webUrl) {
         try {
-            Uri u = Uri.parse(webUrl);
-            String phone = u.getQueryParameter("phone");
-            String text = u.getQueryParameter("text");
-            Uri target = Uri.parse("whatsapp://send?phone=" +
-                    Uri.encode(phone == null ? "" : phone) +
-                    "&text=" + Uri.encode(text == null ? "" : text));
+            // Keep the exact selected customer's phone and prefilled message.
+            // Use the official HTTPS WhatsApp link as the URI, but explicitly
+            // target the WhatsApp Business Android package.
+            Uri target = Uri.parse(webUrl);
             Intent intent = new Intent(Intent.ACTION_VIEW, target);
             intent.setPackage("com.whatsapp.w4b");
             startActivity(intent);
