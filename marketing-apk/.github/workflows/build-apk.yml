@@ -1,0 +1,41 @@
+name: Build Satu Restoe APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'marketing-apk/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: marketing-apk
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.7'
+
+      - name: Create Gradle wrapper
+        run: gradle wrapper --gradle-version 8.7
+
+      - name: Build debug APK
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Marketing-By-WhatsApp-Satu-Restoe-debug
+          path: marketing-apk/app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30
